@@ -1,0 +1,35 @@
+# Secrets — never commit
+.env
+
+# Virtual environments
+venv/
+venv-airflow/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.Python
+
+# Data files — too large for git
+data/raw/
+data/processed/
+*.csv
+
+# Logs
+logs/
+*.log
+pipeline.log
+
+# dbt
+target/
+dbt_packages/
+.user.yml
+
+# Airflow
+airflow/logs/
+airflow/plugins/
+
+# OS
+.DS_Store
+*.swp

@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: raw
+    database: UBER_ANALYTICS
+    schema: RAW
+    tables:
+      - name: trips_staged
+        description: "Raw Uber trip records loaded from NYC TLC CSV via write_pandas."
+        config:
+          loaded_at_field: INGESTION_TIMESTAMP
+        columns:
+          - name: RAW_ID
+            description: "Surrogate UUID per row."
+          - name: BATCH_ID
+            description: "Identifies the pipeline batch."
+          - name: PICKUP_DATETIME
+            description: "Trip pickup timestamp (string, cast in staging)."
+          - name: DROPOFF_DATETIME
+            description: "Trip dropoff timestamp (string, cast in staging)."

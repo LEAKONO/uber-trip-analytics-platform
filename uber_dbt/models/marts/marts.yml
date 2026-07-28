@@ -1,0 +1,65 @@
+version: 2
+
+models:
+  - name: fact_trip
+    description: "One row per valid Uber trip. Bad data filtered to quarantine."
+    columns:
+      - name: trip_key
+        tests:
+          - unique
+          - not_null
+      - name: datetime_key
+        tests:
+          - not_null
+      - name: pickup_location_key
+        tests:
+          - not_null
+      - name: dropoff_location_key
+        tests:
+          - not_null
+      - name: fare_amount
+        tests:
+          - not_null
+      - name: total_amount
+        tests:
+          - not_null
+
+  - name: dim_datetime
+    description: "Calendar and time dimension built from distinct pickup datetimes."
+    columns:
+      - name: datetime_key
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_location
+    description: "Distinct pickup and dropoff coordinates with borough classification."
+    columns:
+      - name: location_key
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_vendor
+    description: "Taxi vendor lookup."
+    columns:
+      - name: vendor_key
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_rate_code
+    description: "Rate code lookup."
+    columns:
+      - name: rate_code_key
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_payment_type
+    description: "Payment type lookup."
+    columns:
+      - name: payment_type_key
+        tests:
+          - unique
+          - not_null

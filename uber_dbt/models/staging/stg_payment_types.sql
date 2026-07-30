@@ -1,5 +1,4 @@
--- Static lookup table for payment_type codes
--- Source: NYC TLC data dictionary
+
 
 with payment_types as (
 

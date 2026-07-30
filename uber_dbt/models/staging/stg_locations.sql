@@ -1,5 +1,4 @@
--- Extracts distinct pickup and dropoff coordinates
--- Both roles feed the same dim_location table
+
 
 with pickup_locations as (
 

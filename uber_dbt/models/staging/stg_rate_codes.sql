@@ -1,5 +1,4 @@
--- Static lookup table for RatecodeID codes
--- Source: NYC TLC data dictionary
+
 
 with rate_codes as (
 

@@ -1,5 +1,3 @@
--- Static lookup table for VendorID codes
--- Source: NYC TLC data dictionary
 
 with vendors as (
 

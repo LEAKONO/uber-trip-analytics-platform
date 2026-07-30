@@ -1,5 +1,4 @@
--- Extracts distinct pickup datetimes and enriches with calendar attributes
--- Used to build dim_datetime in the marts layer
+
 
 with source as (
 

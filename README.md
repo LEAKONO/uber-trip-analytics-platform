@@ -408,6 +408,6 @@ airflow standalone
 ## Author
 
 **Emmanuel Leakono**
-Junior Data Engineer · Nairobi, Kenya
+Data Engineer · Kenya
 ---
 
